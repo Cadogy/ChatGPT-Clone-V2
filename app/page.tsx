@@ -5,11 +5,11 @@ function HomePage() {
     <div className="flex flex-col items-center justify-center h-screen px-2 text-white">
       {/* <h1 className="text-5xl font-bold mb-20">CODR</h1> */}
       
-      <div className="flex space-x-2 text-center">
+      <div className="w-full md:max-w-[90%] justify-center gap-0 md:gap-2 flex overflow-y-scroll md:overflow-auto flex-col md:flex-row space-y-2 my-4 text-center">
 
-        <div>
+        <div className="mt-2">
           <div className="flex flex-col items-center justify-center mb-5">
-            {/* SUN ICON */}
+            {/* Exmaples Column */}
             <SunIcon className="h-8 w-8 text-neutral-400"/>
             <h2 className="">Examples</h2>
           </div>
@@ -23,7 +23,7 @@ function HomePage() {
 
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            {/* SUN ICON */}
+            {/* Capabilities Column */}
             <BoltIcon className="h-8 w-8 text-neutral-400"/>
             <h2 className="">Capabilities</h2>
           </div>
@@ -37,7 +37,7 @@ function HomePage() {
 
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            {/* SUN ICON */}
+            {/* Limitations Column */}
             <ExclamationTriangleIcon className="h-8 w-8 text-neutral-400"/>
             <h2 className="">Limitations</h2>
           </div>

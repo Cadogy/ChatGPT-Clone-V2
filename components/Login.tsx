@@ -8,10 +8,10 @@ import loginBg2 from '../public/assets/login_bg_gpt_2.gif'
 
 function Login() {
   return (
-    <div className="bg-[white] h-screen flex md:flex-row flex-col-reverse items-center justify-center text-center">
+    <div className="bg-[white] sm:h-[100%] md:height-screen flex md:flex-row flex-col-reverse items-center justify-around text-center">
       
       {/* LEFT SIDE */}
-      <div className="bg-[white] md:max-w-[40%] -mt-6 px-16 md:px-0 rounded-lg flex flex-col w-screen h-screen justify-around md:justify-center items-center">
+      <div className="bg-[white] md:max-w-[40%] md:py-2 py-16 -mt-6 px-16 md:px-0 rounded-lg flex flex-col w-screen justify-around md:justify-center items-center">
         {/* LOGO CONTAINER */}
         <div className="flex flex-col justify-center items-center md:mb-12">
           <Image 
@@ -53,8 +53,8 @@ function Login() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="md:max-w-[60%] flex flex-col w-screen md:h-screen justify-center items-center">
-        <Image id="randomBG" src={loginBg1} className="w-screen max-h-[180px] md:max-h-[100%] h-screen object-cover" alt="Login Background Image" />
+      <div className="md:max-w-[100%] flex flex-col w-screen md:h-screen justify-center items-center">
+        <Image id="randomBG" src={loginBg1} className="w-screen max-h-[200px] md:max-h-[100%] h-screen object-cover" alt="Login Background Image" />
       </div>
 
     </div>
