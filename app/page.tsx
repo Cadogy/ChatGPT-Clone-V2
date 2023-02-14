@@ -2,7 +2,7 @@ import { BoltIcon, ExclamationTriangleIcon, SunIcon, InformationCircleIcon } fro
 
 function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen px-6 text-white">
+    <div className="flex flex-col items-center justify-center h-screen px-2 md:px-16 text-white">
 
       <div className="chatScroller my-3 w-full md:max-w-[100%] h-screen items-center justify-center gap-0 md:gap-2 flex overflow-y-scroll md:overflow-auto flex-col md:flex-row space-y-2 my-4 text-center">
         <div className="max-w-[40%] flex flex-col justify-center items-center h-full overflow-auto">
@@ -30,7 +30,7 @@ function HomePage() {
               <img className="rounded-lg p-1" src="https://static.dezeen.com/uploads/2022/04/dall-e-2-openai-artificial-intelligence-design_dezeen_2364_col_2.jpg" alt="" />
             </div>
 
-            <div className="bg-lightMode-primary/0 rounded-lg w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 mb-4">
+            <div className="bg-lightMode-primary/0 rounded-lg w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 mb-1">
               <img className="rounded-lg p-1" src="https://i0.wp.com/hyperallergic-newspack.s3.amazonaws.com/uploads/2022/04/DALL%C2%B7E-A-sea-otter-in-the-style-of-Girl-with-a-Pearl-Earring-by-Johannes-Vermeer.jpg?resize=780%2C780&quality=100&ssl=1" alt="" />
             </div>
 
@@ -44,7 +44,7 @@ function HomePage() {
 
               {/* Home explainer */}
               <div className="flex gap-4">
-                <div className='w-[33%]'>
+                <div className='w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3'>
                   <div className="flex gap-2 flex-col items-center justify-center mb-5">
                     {/* Exmaples Column */}
                     <SunIcon className="h-8 w-8 text-yellow-400"/>
@@ -58,7 +58,7 @@ function HomePage() {
                   </div>
                 </div>
 
-                <div className='w-[33%]'>
+                <div className='w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3'>
                   <div className="flex gap-2 flex-col items-center justify-center mb-5">
                     {/* Capabilities Column */}
                     <BoltIcon className="h-8 w-8 text-blue-400"/>
@@ -72,7 +72,7 @@ function HomePage() {
                   </div>
                 </div>
 
-                <div className='w-[33%]'>
+                <div className='w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3'>
                   <div className="flex gap-2 flex-col items-center justify-center mb-5">
                     {/* Limitations Column */}
                     <ExclamationTriangleIcon className="h-8 w-8 text-red-400"/>
