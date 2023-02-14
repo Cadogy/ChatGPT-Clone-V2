@@ -29,7 +29,7 @@ function NewChat() {
       {/* Create New Chat */}
       <div onClick={createNewChat} className="bg-[#3aba67cc] hover:bg-[#3aba679d] chatRow mb-2 p-[10px] md:text-[14px] text-[12px] pr-[15px]">
         <PlusIcon className='h-4 w-4 md:h-5 md:w-5 text-lightMode-primary/70 font-bold'/>
-        <p className='font-semibold text-lightMode-primary/70'>Create new chat</p>
+        <p className='font-semibold text-lightMode-primary/70'>New Chat</p>
       </div>
       {/* Delete All Chats */}
       <div onClick={createNewChat} className="chatRow mb-2 p-[10px] md:text-[14px] text-[12px]">

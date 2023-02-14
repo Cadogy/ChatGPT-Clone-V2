@@ -60,7 +60,7 @@ function SideBar() {
         </div>
       </div>
 
-      <div className="bg-lightMode-primary/50 shadow-md border-[0px] border-[rgba(100,100,100,0.1)] dark:bg-darkMode-secondary mb-2 p-2 rounded-lg flex gap-1 items-center">
+      <div className="bg-lightMode-primary/70 shadow-md border-[0px] border-[rgba(100,100,100,0.1)] dark:bg-darkMode-secondary mb-2 p-2 rounded-lg flex gap-1 items-center">
         {session && (
           <div className="w-full flex-col flex items-center justify-evenly gap-3 py-2">
 
@@ -104,7 +104,7 @@ function SideBar() {
               {/* COLUMNS */}
 
                 {/* COL 1 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-6 pt-2">
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-6 pt-2">
                   <a
                     onClick={routeHome}
                     title="Switch Applications"
@@ -115,7 +115,7 @@ function SideBar() {
                 </div>
 
                 {/* COL 2 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-6 pt-2">
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-6 pt-2">
                   <a
                     title="Disconnect"
                     onClick={() => signOut()}
@@ -125,7 +125,7 @@ function SideBar() {
                 </div>
 
                 {/* COL 3 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-6 pt-2">
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-6 pt-2">
                   <a
                     title="Disconnect"
                     onClick={() => signOut()}
@@ -135,7 +135,7 @@ function SideBar() {
                 </div>
 
                 {/* COL 4 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex">
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-0 pt-2">
                   <a
                     title="Disconnect"
                     onClick={() => signOut()}
@@ -145,7 +145,7 @@ function SideBar() {
                 </div>
 
                 {/* COL 5 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex">
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-0 pt-2">
                   <a
                     title="Disconnect"
                     onClick={() => signOut()}
@@ -155,7 +155,7 @@ function SideBar() {
                 </div>
 
                 {/* COL 6 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex">
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-0 pt-2">
                   <a
                     title="Disconnect"
                     onClick={() => signOut()}

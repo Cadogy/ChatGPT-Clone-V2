@@ -76,7 +76,7 @@ function ChatInput({ chatId }: Props) {
 
     <div className=" text-lightMode-text dark:text-darkMode-text rounded text-sm mb-2 mx-1 my-1 md:my-0 md:mx-2">
       
-      <div className="mb-4 md:mx-2">
+      <div className="md:mb-4 md:mx-2">
         <form onSubmit={sendMessage} className="shadow-md bg-lightMode-primary/70 border-[1px] border-lightMode-secondary/50 hover:bg-lightMode-primary transition-all dark:bg-darkMode-primary rounded-md p-3 space-x-5 flex">
           <input 
             className="text-[16px] md:text-[18px] bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300 text-lightMode-text dark:text-darkMode-text"

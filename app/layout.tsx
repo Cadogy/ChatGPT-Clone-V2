@@ -23,7 +23,7 @@ export default async function RootLayout({
           ) : (
           <div className="flex">
             {/* Sidebar */}
-            <div className="md:w-[16rem] max-w-xs h-screen">
+            <div className="md:w-[16rem] w-[8rem] h-screen">
               <SideBar />
             </div>
 
