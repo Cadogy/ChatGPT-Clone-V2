@@ -23,6 +23,15 @@ function NewChat() {
     router.push(`/chat/${doc.id}`)
 
   };
+  // const delteAll = async() => {
+  //   const chatsCollection = db.collection('chats');
+  //   const snapshot = await chatsCollection.get();
+  //   snapshot.forEach(doc => {
+  //     await deleteDoc(doc(db, 'users', session?.user?.email!, 'chats', id))
+  //   });
+    
+  //   router.replace('/');
+  // };
 
   return (
     <div className='w-full flex justify-evenly'>
