@@ -3,8 +3,7 @@
 import NewChat from '../components/NewChat'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { useSession, signOut } from 'next-auth/react';
-import { ChatBubbleBottomCenterTextIcon } from '@heroicons/react/24/solid'
-import { BoltSlashIcon } from '@heroicons/react/24/solid'
+import { ChatBubbleBottomCenterTextIcon, ArrowLeftOnRectangleIcon, BellAlertIcon, HomeIcon, CodeBracketIcon, LinkIcon } from '@heroicons/react/24/solid'
 import { db } from '../firebase';
 import ChatRow from './ChatRow'
 import { collection, orderBy, query } from 'firebase/firestore';
@@ -41,7 +40,7 @@ function SideBar() {
           <div className="flex flex-col space-y-2 my-2">
 
             {loading && (
-              <div className="animate-pulse text-center text-white">
+              <div className="animate-pulse text-center text-lightMode-text dark:text-darkMode-text">
                 <p>Loading Chats...</p>
               </div>
             )}
@@ -55,44 +54,110 @@ function SideBar() {
         </div>
       </div>
 
-      <div className="flex gap-1 justify-center items-center">
+      <div className="bg-lightMode-secondary dark:bg-darkMode-secondary mb-2 p-2 rounded flex gap-1 items-center">
         {session && (
-          <div className="w-[100%] flex-col flex items-center justify-evenly">
-            <div className="w-[100%] flex items-center justify-evenly">
-              <div className="">
-                <a
-                  title="Switch Applications"
-                  href="/"
-                  className="cursor-pointer transition-all ease-in-out"
-                >
-                  <ChatBubbleBottomCenterTextIcon className="text-stone-200 hover:text-green-200 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
-                </a>
-              </div>
+          <div className="w-full flex-col flex items-center justify-evenly gap-3 py-2">
 
-              <div className="">
+            {/* TOP PROFILE CONTAINER */}
+            <div className="px-3 gap-3 w-full justify-evenly flex items-center">
+
+              {/* PROFILE IMAGE */}
+              <div className="flex">
                 <img
                   src={session.user?.image!} alt={session.user?.name!}
-                  className="shadow-md h-8 w-8 md:h-12 md:w-12 rounded-full cursor-pointer mx-auto transition-all ease-in-out md:hover:scale-[1.1] hover:shadow-2xl"
+                  className="max-w-[40px] max-h-[40px] shadow-md rounded-full cursor-pointer transition-all ease-in-out md:hover:scale-[1.1] hover:shadow-2xl"
                 />
-              </div>     
+              </div>
 
-              <div className="">
-                <a
-                  title="Disconnect"
-                  onClick={() => signOut()}
-                  className="cursor-pointer transition-all ease-in-out">
-                  <BoltSlashIcon className="text-stone-200 hover:text-red-200 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
-                </a>
-              </div>               
+              {/* PROFILE INFO */}
+              <div className="flex flex-col">
+                <div>
+                  <p
+                    className="text-lightMode-header dark:text-darkMode-header font-semibold text-[14px] md:text-[14px]"
+                  >
+                    {session.user?.name!}
+                  </p>
+                </div>
+
+                <div>
+                  <p
+                    className="hidden md:inline-flex text-lightMode-header dark:text-darkMode-header text-[12px] md:text-[14px]"
+                  >
+                    Full-stack Software Engineer
+                  </p>
+                </div>
+              </div>
 
             </div>
 
-            <div>
-              <p
-                className="text-white font-semibold text-[12px] md:text-[14px]"
-              >
-                {session.user?.name!}
-              </p>
+            {/* BORDER SEPARATION */}
+            <div className="w-full border-t-2 border-lightMode-text/10 rounded-lg">
+            </div>
+
+            {/* MENU ITEM OPTIONS */}
+            <div className="w-full flex flex-wrap px-3 justify-evenly">
+              {/* COLUMNS */}
+
+                {/* COL 1 */}
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex mb-2">
+                  <a
+                    title="Switch Applications"
+                    className="cursor-pointer transition-all ease-in-out"
+                  >
+                    <HomeIcon className="text-lightMode-text hover:text-green-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>
+                </div>
+
+                {/* COL 2 */}
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex mb-2">
+                  <a
+                    title="Disconnect"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <ChatBubbleBottomCenterTextIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+
+                {/* COL 3 */}
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex mb-2">
+                  <a
+                    title="Disconnect"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <BellAlertIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+
+                {/* COL 4 */}
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex">
+                  <a
+                    title="Disconnect"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <CodeBracketIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+
+                {/* COL 5 */}
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex">
+                  <a
+                    title="Disconnect"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <LinkIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+
+                {/* COL 6 */}
+                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex">
+                  <a
+                    title="Disconnect"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <ArrowLeftOnRectangleIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+
             </div>
 
           </div>

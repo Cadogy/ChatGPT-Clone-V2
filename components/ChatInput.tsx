@@ -74,12 +74,12 @@ function ChatInput({ chatId }: Props) {
 
   return (
 
-    <div className=" text-gray-400 rounded-lg text-sm mb-2 mx-2">
+    <div className=" text-lightMode-text dark:text-darkMode-text rounded text-sm mb-2 mx-1 my-1 md:my-0 md:mx-2">
       
-      <div>
-        <form onSubmit={sendMessage} className="bg-zinc-700/30 rounded-lg transition-all ease-in-out hover:bg-zinc-600/30 p-3 space-x-5 flex">
+      <div className="mb-2 md:mx-2">
+        <form onSubmit={sendMessage} className="md:shadow-[-0px_-2px_40px_#b1b1b1] shadow-[0px_0px_0px_black] bg-lightMode-secondary hover:bg-lightMode-secondary dark:bg-darkMode-secondary hover:dark:bg-darkMode-secondary rounded transition-all ease-in-out p-3 space-x-5 flex">
           <input 
-            className="text-[16px] md:text-[18px] bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300"
+            className="text-[16px] md:text-[18px] bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300 text-lightMode-text dark:text-darkMode-text"
             disabled={!session}
             value={prompt}
             onChange={e => setPrompt(e.target.value)}
@@ -90,13 +90,13 @@ function ChatInput({ chatId }: Props) {
           <button
             disabled={!prompt || !session}
             type="submit"
-            className="hover:bg-[#29b995] bg-[#11A37F] disabled:bg-gray-500 disabled:cursor-not-allowed px-4 py-2 rounded items-center justify-center font-bold transition-all ease-in-out hover:scale-[1.1] hover:text-white text-stone-300"
+            className="hover:bg-lightMode-success bg-lightMode-success disabled:bg-gray-500 disabled:cursor-not-allowed px-4 py-2 rounded items-center justify-center font-bold transition-all ease-in-out hover:scale-[1.1] hover:text-white text-stone-300"
           >
             {!prompt && (
-              <NoSymbolIcon className="h-5 w-5 -rotate-45" />
+              <NoSymbolIcon className="text-lightMode-primary dark:text-darkMode-primary h-5 w-5 -rotate-45" />
             )}
             {prompt && (
-              <PaperAirplaneIcon className="h-5 w-5 -rotate-45" />
+              <PaperAirplaneIcon className="text-lightMode-primary dark:text-darkMode-primary h-5 w-5 -rotate-45" />
             )}
             
           </button>

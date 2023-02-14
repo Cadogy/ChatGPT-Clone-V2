@@ -11,10 +11,10 @@ function HomePage() {
           <div className="flex flex-col items-center justify-center mb-5">
             {/* Exmaples Column */}
             <SunIcon className="h-8 w-8 text-neutral-400"/>
-            <h2 className="">Examples</h2>
+            <h2 className="text-lightMode-header dark:text-darkMode-header">Examples</h2>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 text-lightMode-text dark:text-darkMode-text">
             <p id="exampleText">"Explain something to me"</p>
             <p id="exampleText">"Create a course syllabus for me"</p>
             <p id="exampleText">"What is JavaScript?"</p>
@@ -25,10 +25,10 @@ function HomePage() {
           <div className="flex flex-col items-center justify-center mb-5">
             {/* Capabilities Column */}
             <BoltIcon className="h-8 w-8 text-neutral-400"/>
-            <h2 className="">Capabilities</h2>
+            <h2 className="text-lightMode-header dark:text-darkMode-header">Capabilities</h2>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 text-lightMode-text dark:text-darkMode-text">
             <p id="infoText">Choose your desired GPT Model when chatting</p>
             <p id="infoText">Save your chats to continue from anywhere</p>
             <p id="infoText">Live notifications and interactivity</p>
@@ -39,10 +39,10 @@ function HomePage() {
           <div className="flex flex-col items-center justify-center mb-5">
             {/* Limitations Column */}
             <ExclamationTriangleIcon className="h-8 w-8 text-neutral-400"/>
-            <h2 className="">Limitations</h2>
+            <h2 className="text-lightMode-header dark:text-darkMode-header">Limitations</h2>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 text-lightMode-text dark:text-darkMode-text">
             <p id="infoText">May occasionally generate incorrect information</p>
             <p id="infoText">May occasionally produce harmful instructions or biased content</p>
             <p id="infoText">Limited knowledge of world and events after 2021</p>
