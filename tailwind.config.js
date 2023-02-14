@@ -28,7 +28,11 @@ module.exports = {
         'darkMode-header':'#F8F8F2',
         'darkMode-text': '#EBEBEB',
         'darkMode-cta': '#BD93F9',
-      }
+      },
+      backgroundImage: {
+        'main-rainbowbg': 'linear-gradient(180deg,#fff 4.32%,rgba(255,255,255,0.2) 100%),linear-gradient(270deg,rgba(0,255,253,0.2) 0,rgba(236,0,255,0.2) 51.26%,rgba(255,103,0,0.2) 100%)',
+        'main-rainbowbg-reverse': 'linear-gradient(180deg,#fff 4.32%,rgba(255,255,255,0.2) 100%),linear-gradient(270deg,rgba(0,255,253,0.2) 0,rgba(236,0,255,0.2) 51.26%,rgba(255,103,0,0.2) 100%)',
+      },
     },
   },
   plugins: [],

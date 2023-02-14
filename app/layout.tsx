@@ -23,7 +23,7 @@ export default async function RootLayout({
           ) : (
           <div className="flex">
             {/* Sidebar */}
-            <div className="md:w-[16rem] bg-lightMode-neutral dark:bg-darkMode-neutral max-w-xs h-screen overflow-y-auto">
+            <div className="md:w-[16rem] max-w-xs h-screen overflow-y-auto">
               <SideBar />
             </div>
 

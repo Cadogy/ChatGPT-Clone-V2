@@ -54,18 +54,18 @@ function SideBar() {
         </div>
       </div>
 
-      <div className="bg-lightMode-secondary dark:bg-darkMode-secondary mb-2 p-2 rounded flex gap-1 items-center">
+      <div className="bg-main-rainbowbg shadow-xl border-[0px] border-[rgba(100,100,100,0.1)] dark:bg-darkMode-secondary mb-2 p-2 rounded-lg flex gap-1 items-center">
         {session && (
           <div className="w-full flex-col flex items-center justify-evenly gap-3 py-2">
 
             {/* TOP PROFILE CONTAINER */}
-            <div className="px-3 gap-3 w-full justify-evenly flex items-center">
+            <div className="py-3 mb-2 border-[0px] shadow-lg rounded-lg px-3 gap-3 w-full justify-evenly flex items-center">
 
               {/* PROFILE IMAGE */}
-              <div className="flex">
+              <div className="max-w-[64px] max-h-[64px] flex">
                 <img
                   src={session.user?.image!} alt={session.user?.name!}
-                  className="max-w-[40px] max-h-[40px] shadow-md rounded-full cursor-pointer transition-all ease-in-out md:hover:scale-[1.1] hover:shadow-2xl"
+                  className="shadow-md rounded-full cursor-pointer transition-all ease-in-out md:hover:scale-[1.1] hover:shadow-2xl"
                 />
               </div>
 
@@ -83,7 +83,7 @@ function SideBar() {
                   <p
                     className="hidden md:inline-flex text-lightMode-header dark:text-darkMode-header text-[12px] md:text-[14px]"
                   >
-                    Full-stack Software Engineer
+                    Member
                   </p>
                 </div>
               </div>
@@ -91,8 +91,7 @@ function SideBar() {
             </div>
 
             {/* BORDER SEPARATION */}
-            <div className="w-full border-t-2 border-lightMode-text/10 rounded-lg">
-            </div>
+            {/* <div className="w-full border-t-[1px] border-lightMode-text/10 rounded-lg"></div> */}
 
             {/* MENU ITEM OPTIONS */}
             <div className="w-full flex flex-wrap px-3 justify-evenly">
@@ -101,6 +100,7 @@ function SideBar() {
                 {/* COL 1 */}
                 <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex mb-2">
                   <a
+                    href="/"
                     title="Switch Applications"
                     className="cursor-pointer transition-all ease-in-out"
                   >
