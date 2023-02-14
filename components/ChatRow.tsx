@@ -34,11 +34,6 @@ function ChatRow({ id }: Props) {
     router.replace('/');
   }
 
-  const removeAllChats = async() => {
-    await deleteDoc(doc(db, 'users', session?.user?.email!, 'chats', id))
-    router.replace('/');
-  }
-
   return (
     <Link href={`/chat/${id}`} className={`hover:bg-lightMode-secondary/50 dark:hover:bg-darkMode-secondary/50 chatRow justify-around items-center ${active && 'shadow border-[0px] border-lightMode-secondary bg-main-rainbowbg-colorful dark:bg-main-rainbowbg-colorful'}`}>
       <ChatBubbleLeftIcon className={`h-5 w-5 text-lightMode-header dark:text-darkMode-header ${active && "text-lightMode-cta"}`}/>
