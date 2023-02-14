@@ -4,47 +4,34 @@
 
 @layer components {
   #infoText, #exampleText {
-    @apply p-4 bg-lightMode-primary/90 shadow rounded-lg max-w-full my-2 hover:shadow-lg transition-all ease-in-out cursor-pointer
+    @apply p-4 bg-lightMode-primary/90 shadow rounded-lg max-w-full my-4 hover:shadow-lg hover:-translate-y-1 transition-all ease-in-out cursor-pointer
   }
   .chatRow {
     @apply rounded px-5 py-3 text-sm flex items-center justify-center space-x-2 cursor-pointer text-gray-300 transition-all duration-200 ease-out
   }
 }
 
-/* Gradient Border + Keyframes */
-.gradient-border {
-  --borderWidth: 3px;
-  background: transparent;
-  position: relative;
-  border-radius: var(--borderWidth);
-  margin: 1rem;
-}
-.gradient-border:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f7953330, #f3705530, #ef4e7b30, #a166ab30, #5073b830, #1098ad30, #07b39b30, #6fba8230);
-  border-radius: calc(4 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
-}
+/* ===== ChatGPT Scrollbar CSS ===== */
+  /* Firefox */
+  .chatGptSection, .chatScroller {
+    scrollbar-width: auto;
+    scrollbar-color: #d4d4d4 #ffffff;
+  }
 
+  /* Chrome, Edge, and Safari */
+  .chatGptSection::-webkit-scrollbar, .chatScroller::-webkit-scrollbar {
+    width: 12px;
+  }
 
-@keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+  .chatGptSection::-webkit-scrollbar-track, .chatScroller::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .chatGptSection::-webkit-scrollbar-thumb, .chatScroller::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 5px;
+    border: 3px solid transparent;
+  }
 
 
 /* :root {

@@ -76,8 +76,8 @@ function ChatInput({ chatId }: Props) {
 
     <div className=" text-lightMode-text dark:text-darkMode-text rounded text-sm mb-2 mx-1 my-1 md:my-0 md:mx-2">
       
-      <div className="mb-2 md:mx-2">
-        <form onSubmit={sendMessage} className="md:shadow-[-0px_-2px_40px_#b1b1b1] shadow-[0px_0px_0px_black] bg-lightMode-secondary hover:bg-lightMode-secondary dark:bg-darkMode-secondary hover:dark:bg-darkMode-secondary rounded transition-all ease-in-out p-3 space-x-5 flex">
+      <div className="mb-4 md:mx-2">
+        <form onSubmit={sendMessage} className="shadow-md bg-lightMode-primary/70 border-[1px] border-lightMode-secondary/50 hover:bg-lightMode-primary transition-all dark:bg-darkMode-primary rounded-md p-3 space-x-5 flex">
           <input 
             className="text-[16px] md:text-[18px] bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300 text-lightMode-text dark:text-darkMode-text"
             disabled={!session}
@@ -90,7 +90,7 @@ function ChatInput({ chatId }: Props) {
           <button
             disabled={!prompt || !session}
             type="submit"
-            className="hover:bg-lightMode-success bg-lightMode-success disabled:bg-gray-500 disabled:cursor-not-allowed px-4 py-2 rounded items-center justify-center font-bold transition-all ease-in-out hover:scale-[1.1] hover:text-white text-stone-300"
+            className="hover:bg-lightMode-success bg-lightMode-success disabled:bg-gray-500/50 disabled:cursor-not-allowed px-4 py-2 rounded items-center justify-center font-bold transition-all ease-in-out hover:scale-[1.1] hover:text-white text-stone-300"
           >
             {!prompt && (
               <NoSymbolIcon className="text-lightMode-primary dark:text-darkMode-primary h-5 w-5 -rotate-45" />

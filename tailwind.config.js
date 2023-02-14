@@ -30,8 +30,8 @@ module.exports = {
         'darkMode-cta': '#BD93F9',
       },
       backgroundImage: {
-        'main-rainbowbg': 'linear-gradient(180deg,#fff 4.32%,rgba(255,255,255,0.2) 100%),linear-gradient(270deg,rgba(0,255,253,0.2) 0,rgba(236,0,255,0.2) 51.26%,rgba(255,103,0,0.2) 100%)',
-        'main-rainbowbg-reverse': 'linear-gradient(180deg,#fff 4.32%,rgba(255,255,255,0.2) 100%),linear-gradient(270deg,rgba(0,255,253,0.2) 0,rgba(236,0,255,0.2) 51.26%,rgba(255,103,0,0.2) 100%)',
+        'main-rainbowbg':'linear-gradient(180deg,#fff 4.32%,rgba(255,255,255,0.1) 100%),linear-gradient(270deg,rgba(0,255,253,0.1) 0,rgba(236,0,255,0.1) 51.26%,rgba(255,103,0,0.1) 100%)',
+        'main-rainbowbg-colorful':'linear-gradient(180deg,#f7f7f7 4.32%,rgba(255,255,255,0) 100%),linear-gradient(270deg,rgba(0,255,253,0.2) 0,rgba(236,0,255,0.2) 51.26%,rgba(255,103,0,0.2) 100%)',
       },
     },
   },

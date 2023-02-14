@@ -34,14 +34,19 @@ function ChatRow({ id }: Props) {
     router.replace('/');
   }
 
+  const removeAllChats = async() => {
+    await deleteDoc(doc(db, 'users', session?.user?.email!, 'chats', id))
+    router.replace('/');
+  }
+
   return (
-    <Link href={`/chat/${id}`} className={`hover:bg-lightMode-secondary dark:hover:bg-darkMode-secondary chatRow justify-around items-center ${active && 'bg-lightMode-secondary/70 dark:bg-darkMode-secondary/70'}`}>
-      <ChatBubbleLeftIcon className="h-5 w-5 text-lightMode-header dark:text-darkMode-header"/>
-      <p className="truncate flex-1 hidden md:inline-flex whitespace-nowrap text-lightMode-text dark:text-darkMode-text">
+    <Link href={`/chat/${id}`} className={`hover:bg-lightMode-secondary/50 dark:hover:bg-darkMode-secondary/50 chatRow justify-around items-center ${active && 'shadow border-[0px] border-lightMode-secondary bg-main-rainbowbg-colorful dark:bg-main-rainbowbg-colorful'}`}>
+      <ChatBubbleLeftIcon className={`h-5 w-5 text-lightMode-header dark:text-darkMode-header ${active && "text-lightMode-cta"}`}/>
+      <p className={`truncate flex-1 hidden md:inline-flex whitespace-nowrap text-lightMode-text/70 dark:text-darkMode-text/70 ${active && "font-semibold text-lightMode-cta"}`}>
         {messages?.docs[messages?.docs.length - 1]?.data().text || 'New Chat'}
       </p>
       <button onClick={() => setShowModal(true)} className="">
-        <TrashIcon className="h-5 w-5 text-gray-700 hover:text-red-500 transition-all ease-in-out"/>
+        <TrashIcon className={`h-5 w-5 text-gray-700 hover:text-red-500 transition-all ease-in-out`}/>
       </button>
 
       {showModal ? (
@@ -96,7 +101,7 @@ function ChatRow({ id }: Props) {
               </div>
             </div>
           </div>
-          {/* <div className="opacity-20 fixed inset-0 z-40 bg-black"></div> */}
+          <div className="opacity-20 fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
 

@@ -16,14 +16,14 @@ export default async function RootLayout({
   return (
     <html>
       <head />
-      <body>
+      <body className='bg-main-rainbowbg'>
         <SessionProvider session={session}>
           {!session ? (
             <Login />
           ) : (
           <div className="flex">
             {/* Sidebar */}
-            <div className="md:w-[16rem] max-w-xs h-screen overflow-y-auto">
+            <div className="md:w-[16rem] max-w-xs h-screen">
               <SideBar />
             </div>
 
@@ -31,7 +31,7 @@ export default async function RootLayout({
             <ClientProvider />
 
 
-            <div className="bg-primary flex-1 ">{children}</div>
+            <div className="bg-primary flex-1">{children}</div>
           </div>            
           )}
 

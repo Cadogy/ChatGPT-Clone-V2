@@ -10,18 +10,18 @@ function ClientProvider() {
         position="top-right"
         toastOptions={{
           style: {
-            backgroundColor: '#202123',
-            color: 'white',
+            backgroundColor: '#FFF',
+            color: '#222',
           },
           success: {
             style: {
-              backgroundColor: '#202123',
+              backgroundColor: '#FFF',
               color: 'lightGreen',
             },
           },
           error: {
             style: {
-              backgroundColor: '#202123',
+              backgroundColor: '#FFF',
               color: 'firebrick'
             },
           },
