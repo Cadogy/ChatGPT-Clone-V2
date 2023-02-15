@@ -4,6 +4,8 @@ This is a rewrite of my original ChatGPT clone. Includes many new features such 
 - Choose your GPT model type (different nerual networks)
 - Google oAuth sign-in and authentication
 
-# Examples
-<img src="https://i.ibb.co/vz1CQK9/cad-gpt-vercel-app.png" />
-<img src="https://i.ibb.co/XxycDMT/cad-gpt-vercel-app-1.png" />
+# Auth Page
+<img src="https://i.ibb.co/4KJ2jhv/localhost-3000-login-page.png" />
+
+# Landing Page - GPT
+<img src="https://i.ibb.co/0nWfH20/cad-gpt-vercel-app-2.png" />
