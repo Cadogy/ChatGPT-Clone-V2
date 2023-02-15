@@ -21,7 +21,7 @@ function Login() {
             alt="Logo"
           />
           <h1 className="text-black font-bold text-3xl">CREATOR PORTAL</h1>
-          <p className="text-stone-500">The Modern Creator's Toolkit</p>
+          <p className="text-stone-500">The Modern Creator Toolkit</p>
         </div>
 
         {/* LOGIN CONTAINER */}
