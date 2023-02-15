@@ -24,7 +24,7 @@ function Chat({ chatId }: Props) {
       {messages?.empty && (
         <>
           <div className="">
-            <p className="mt-10 text-center font-semibold text-lightMode-text/30">
+            <p className="select-none mt-10 text-center font-semibold text-lightMode-text/30">
               Type a prompt in below to get started.
             </p>
             <ArrowDownCircleIcon

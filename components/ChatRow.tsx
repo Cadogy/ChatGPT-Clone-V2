@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
-import Modal from "./Modal";
 
 type Props = {
   id: string;
@@ -70,8 +69,6 @@ function ChatRow({ id }: Props) {
                 <div className="flex relative p-6 flex-auto justify-center items-center">
                   <p className="text-center flex flex-col justify-center items-center my-4 text-lightMode-text text-lg leading-relaxed">
                     Are you sure you want to delete this chat?
-                    <br />
-                    Once you click delete, there's no going back!
                   </p>
                 </div>
                 {/*footer*/}

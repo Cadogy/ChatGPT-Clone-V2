@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  #infoText, #exampleText {
-    @apply md:p-4 bg-lightMode-primary/90 shadow rounded-lg max-w-full my-4 hover:shadow-lg hover:-translate-y-1 transition-all ease-in-out cursor-pointer
+  #infoText, #exampleText1, #exampleText2, #exampleText3 {
+    @apply lg:text-[16px] md:text-[14px] bg-lightMode-primary/90 shadow rounded-lg max-w-full my-4 hover:shadow-lg hover:-translate-y-1 transition-all ease-in-out cursor-pointer
   }
   .chatRow {
     @apply rounded px-5 py-3 text-sm flex items-center justify-center space-x-2 cursor-pointer text-gray-300 transition-all duration-200 ease-out

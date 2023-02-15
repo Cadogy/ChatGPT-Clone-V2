@@ -16,7 +16,7 @@ export default async function RootLayout({
   return (
     <html>
       <head />
-      <body className='bg-main-rainbowbg'>
+      <body className='bg-main-rainbowbg bg-cover bg-no-repeat'>
         <SessionProvider session={session}>
           {!session ? (
             <Login />

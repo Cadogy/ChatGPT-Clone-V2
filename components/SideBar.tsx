@@ -3,7 +3,7 @@
 import NewChat from '../components/NewChat'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { useSession, signOut } from 'next-auth/react';
-import { ChatBubbleBottomCenterTextIcon, ArrowLeftOnRectangleIcon, BellAlertIcon, HomeIcon, CodeBracketIcon, LinkIcon } from '@heroicons/react/24/solid'
+import { GlobeAltIcon, HomeIcon, AcademicCapIcon, XCircleIcon, ArrowLeftOnRectangleIcon } from '@heroicons/react/24/outline'
 import { db } from '../firebase';
 import ChatRow from './ChatRow'
 import { collection, orderBy, query } from 'firebase/firestore';
@@ -65,13 +65,14 @@ function SideBar() {
           <div className="w-full flex-col flex items-center justify-evenly gap-3 py-2">
 
             {/* TOP PROFILE CONTAINER */}
-            <div className="py-3 mb-2 border-[0px] border-[rgba(100,100,100,0.1)] shadow-md rounded-lg px-3 gap-3 w-full justify-evenly flex items-center">
+            <div className="select-none py-3 mb-2 border-[0px] border-[rgba(100,100,100,0.1)] shadow-md rounded-lg px-3 gap-3 w-full justify-evenly flex items-center">
 
               {/* PROFILE IMAGE */}
               <div className="max-w-[64px] max-h-[64px] flex">
                 <img
+                title="View Profile"
                   src={session.user?.image!} alt={session.user?.name!}
-                  className="shadow rounded-full cursor-pointer transition-all ease-in-out md:hover:scale-[1.05] hover:shadow-2xl"
+                  className="shadow rounded-full cursor-pointer transition-all ease-in-out md:hover:scale-[1.05] hover:shadow-md"
                 />
               </div>
 
@@ -100,69 +101,100 @@ function SideBar() {
             {/* <div className="w-full border-t-[1px] border-lightMode-text/10 rounded-lg"></div> */}
 
             {/* MENU ITEM OPTIONS */}
-            <div className="z-[10] w-full flex flex-wrap px-3 items-center justify-evenly">
-              {/* COLUMNS */}
+            <div className="z-[10] w-full flex flex-wrap">
+              
+              {/* GPT OPTIONS */}
+              <div className="flex">
+                <h1 className="text-lightMode-text text-[13px] px-3 font-semibold select-none">GPT Options</h1> 
+              </div>
 
-                {/* COL 1 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-6 pt-2">
+              <div className="w-full flex flex-wrap items-center justify-evenly">
+                {/* COL 1 HOME*/}
+                <div className="w-1/2 md:w-1/4 justify-center flex pt-2">
                   <a
                     onClick={routeHome}
-                    title="Switch Applications"
+                    title="Home"
                     className="cursor-pointer transition-all ease-in-out"
                   >
-                    <HomeIcon className="text-lightMode-text hover:text-green-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                    <HomeIcon className="text-lightMode-text hover:text-blue-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
                   </a>
                 </div>
 
-                {/* COL 2 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-6 pt-2">
+                {/* COL 2 EXPLORE*/}
+                <div className="w-1/2 md:w-1/4 justify-center flex pt-2">
                   <a
-                    title="Disconnect"
+                    title="Explore"
                     onClick={() => signOut()}
                     className="cursor-pointer transition-all ease-in-out">
-                    <ChatBubbleBottomCenterTextIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                    <GlobeAltIcon className="text-lightMode-text hover:text-green-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
                   </a>                  
                 </div>
 
-                {/* COL 3 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-6 pt-2">
+                {/* COL 3 LEARN */}
+                <div className="w-1/2 md:w-1/4 justify-center flex pt-2">
                   <a
-                    title="Disconnect"
+                    title="Learn"
                     onClick={() => signOut()}
                     className="cursor-pointer transition-all ease-in-out">
-                    <BellAlertIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                    <AcademicCapIcon className="text-lightMode-text hover:text-yellow-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
                   </a>                  
                 </div>
 
-                {/* COL 4 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-0 pt-2">
+                {/* COL 4 SIGN OUT*/}
+                <div className="w-1/2 md:w-1/4 justify-center flex md:pb-0 pt-2">
                   <a
-                    title="Disconnect"
-                    onClick={() => signOut()}
-                    className="cursor-pointer transition-all ease-in-out">
-                    <CodeBracketIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
-                  </a>                  
-                </div>
-
-                {/* COL 5 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-0 pt-2">
-                  <a
-                    title="Disconnect"
-                    onClick={() => signOut()}
-                    className="cursor-pointer transition-all ease-in-out">
-                    <LinkIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
-                  </a>                  
-                </div>
-
-                {/* COL 6 */}
-                <div className="w-1/2 sm:w-1/2 md:w-1/3 justify-center flex pb-3 md:pb-0 pt-2">
-                  <a
-                    title="Disconnect"
+                    title="Log Out"
                     onClick={() => signOut()}
                     className="cursor-pointer transition-all ease-in-out">
                     <ArrowLeftOnRectangleIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
                   </a>                  
                 </div>
+              </div>
+
+              {/* DALL-E OPTIONS */}
+              {/* <div className="flex">
+                <h1 className="text-lightMode-text text-[13px] px-3 font-semibold select-none">DALL-E Options</h1> 
+              </div>
+
+              <div className="w-full flex flex-wrap items-center justify-evenly">
+
+                <div className="w-1/2 md:w-1/4 justify-center flex pt-2">
+                  <a
+                    onClick={routeHome}
+                    title="Home"
+                    className="cursor-pointer transition-all ease-in-out"
+                  >
+                    <HomeIcon className="text-lightMode-text hover:text-blue-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>
+                </div>
+
+                <div className="w-1/2 md:w-1/4 justify-center flex pt-2">
+                  <a
+                    title="Explore"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <GlobeAltIcon className="text-lightMode-text hover:text-green-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+
+                <div className="w-1/2 md:w-1/4 justify-center flex pt-2">
+                  <a
+                    title="Learn"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <AcademicCapIcon className="text-lightMode-text hover:text-yellow-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+
+                <div className="w-1/2 md:w-1/4 justify-center flex md:pb-0 pt-2">
+                  <a
+                    title="Log Out"
+                    onClick={() => signOut()}
+                    className="cursor-pointer transition-all ease-in-out">
+                    <XCircleIcon className="text-lightMode-text hover:text-red-500 md:scale-[1.15] md:hover:scale-[1.4] cursor-pointer transition-all ease-in-out w-6 h-6"/>
+                  </a>                  
+                </div>
+              </div> */}
 
             </div>
 

@@ -8,9 +8,24 @@ import { FormEvent, useState } from "react";
 import { toast } from 'react-hot-toast'
 import ModelSelection from "./ModelSelection";
 import useSWR from 'swr'
+import errorSound from '../public/assets/audio/error.mp3'
+import successSound from '../public/assets/audio/message.mp3'
 
 type Props = {
   chatId: string;
+}
+
+const errorNoise = new Audio(errorSound);
+errorNoise.preload = 'auto';
+errorNoise.load();
+
+const successNoise = new Audio(successSound);
+
+function chatError() {
+  let click = errorNoise.cloneNode();
+  errorNoise.play();
+  errorNoise.volume = 0.1;
+    toast.error(`Enter some text to continue`);
 }
 
 function ChatInput({ chatId }: Props) {
@@ -66,10 +81,17 @@ function ChatInput({ chatId }: Props) {
       }),
     }).then(() => {
       // Toast notication to send success message
+      successNoise.play();
+      successNoise.volume = 0.4;
       toast.success(`Response.`, {
         id: notification,      
       });
-    });
+    })
+      .catch((err) => {
+        toast.error(`Error.`, {
+          id: notification,
+        });
+      });
   };
 
   return (
@@ -93,7 +115,7 @@ function ChatInput({ chatId }: Props) {
             className="hover:bg-lightMode-success bg-lightMode-success disabled:bg-gray-500/50 disabled:cursor-not-allowed px-4 py-2 rounded items-center justify-center font-bold transition-all ease-in-out hover:scale-[1.1] hover:text-white text-stone-300"
           >
             {!prompt && (
-              <NoSymbolIcon className="text-lightMode-primary dark:text-darkMode-primary h-5 w-5 -rotate-45" />
+              <NoSymbolIcon onClick={chatError} className="text-lightMode-primary dark:text-darkMode-primary h-5 w-5 -rotate-45" />
             )}
             {prompt && (
               <PaperAirplaneIcon className="text-lightMode-primary dark:text-darkMode-primary h-5 w-5 -rotate-45" />
@@ -113,8 +135,5 @@ function ChatInput({ chatId }: Props) {
     </div>
   )
 }
-
-
-
 
 export default ChatInput

@@ -12,17 +12,20 @@ function ClientProvider() {
           style: {
             backgroundColor: '#FFF',
             color: '#222',
+            userSelect: 'none',
           },
           success: {
             style: {
               backgroundColor: '#FFF',
               color: 'lightGreen',
+              userSelect: 'none',
             },
           },
           error: {
             style: {
               backgroundColor: '#FFF',
-              color: 'firebrick'
+              color: 'firebrick',
+              userSelect: 'none',
             },
           },
         }}
