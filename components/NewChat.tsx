@@ -86,11 +86,11 @@ function NewChat() {
   // };
 
   return (
-    <div className='w-full flex justify-evenly'>
+    <div className='w-full flex justify-evenly pr-2 md:pr-0'>
       {/* Create New Chat */}
-      <div title="Create new chat" onClick={createNewChat} className="bg-[#3aba67cc] hover:bg-[#3aba679d] chatRow mb-2 py-[10px] w-full md:text-[14px] text-[12px] select-none">
-        <PlusIcon className='h-4 w-4 md:h-5 md:w-5 text-lightMode-primary/70 font-bold'/>
-        <p className='font-semibold text-lightMode-primary/70'>New Chat</p>
+      <div title="Create new chat" onClick={createNewChat} className="bg-[#3aba67cc] hover:bg-[#63d18ad7] chatRow mb-2 px-0 md:px-2 py-[10px] w-full md:text-[14px] text-[12px] select-none items-center">
+        <PlusIcon className='hidden md:inline-flex h-4 w-4 md:h-5 md:w-5 text-lightMode-primary font-bold'/>
+        <p className='font-semibold text-lightMode-primary'>New Chat</p>
       </div>
       {/* Delete All Chats */}
       {/* <div title="Delete all chats" onClick={deleteCollection} className="chatRow mb-2 p-[10px] md:text-[14px] text-[12px] select-none">

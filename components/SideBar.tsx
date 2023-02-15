@@ -43,7 +43,7 @@ function SideBar() {
             <ModelSelection />
           </div>
           
-          <div className="flex flex-col space-y-2 mb-1 mt-2">
+          <div className="flex flex-col space-y-2 mb-1 mt-2 pr-2 md:pr-0">
 
             {loading && (
               <div className="animate-pulse text-center text-lightMode-text dark:text-darkMode-text">
@@ -60,7 +60,7 @@ function SideBar() {
         </div>
       </div>
 
-      <div className="bg-lightMode-primary/70 shadow-md border-[0px] border-[rgba(100,100,100,0.1)] dark:bg-darkMode-secondary mb-2 p-2 rounded-lg flex gap-1 items-center">
+      <div className="bg-lightMode-primary/70 shadow-md border-[0px] border-[rgba(100,100,100,0.1)] dark:bg-darkMode-secondary md:mb-2 p-2 rounded-lg flex gap-1 items-center">
         {session && (
           <div className="w-full flex-col flex items-center justify-evenly gap-3 py-2">
 
@@ -104,8 +104,8 @@ function SideBar() {
             <div className="z-[10] w-full flex flex-wrap">
               
               {/* GPT OPTIONS */}
-              <div className="flex">
-                <h1 className="text-lightMode-text text-[13px] px-3 font-semibold select-none">GPT Options</h1> 
+              <div className="flex mx-auto mx-0">
+                <h1 className="text-lightMode-text text-[13px] md:px-3 font-semibold select-none">GPT Options</h1> 
               </div>
 
               <div className="w-full flex flex-wrap items-center justify-evenly">

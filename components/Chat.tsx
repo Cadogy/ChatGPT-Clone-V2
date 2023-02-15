@@ -19,7 +19,7 @@ function Chat({ chatId }: Props) {
   ));
 
   return (
-    <div className="chatScroller py-1 md:py-3 flex-1 overflow-y-auto overflow-x-hidden">
+    <div className="chatScroller px-1 py-1 md:py-3 flex-1 overflow-y-auto overflow-x-hidden">
 
       {messages?.empty && (
         <>

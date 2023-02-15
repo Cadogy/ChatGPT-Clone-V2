@@ -32,7 +32,7 @@ function HomePage() {
       
       <div className="w-full md:max-w-[100%] md:h-screen items-center justify-center gap-0 md:gap-2 flex overflow-y-scroll md:overflow-auto flex-col md:flex-row space-y-2 my-4 text-center">
 
-        <div className="flex flex-col w-[100%] md:w-[96%] overflow-auto py-2">
+        <div className="flex flex-col w-[96%] xl:w-[76%] overflow-auto py-2">
 
           {/* Home explainer */}
           <div className="flex flex-col md:flex-row gap-4">
@@ -44,9 +44,9 @@ function HomePage() {
               </div>
 
               <div className="select-none text-lightMode-text dark:text-darkMode-text">
-                <p onClick={() => copyToClipBoard(document.getElementById('exampleText1')?.innerText!)} id="exampleText1" className='h-[80px] flex items-center justify-center'>Explain something to me</p>
-                <p onClick={() => copyToClipBoard(document.getElementById('exampleText2')?.innerText!)} id="exampleText2" className='h-[80px] flex items-center justify-center'>Create a course syllabus for me</p>
-                <p onClick={() => copyToClipBoard(document.getElementById('exampleText3')?.innerText!)} id="exampleText3" className='h-[80px] flex items-center justify-center'>What is JavaScript?</p>
+                <p onClick={() => copyToClipBoard(document.getElementById('exampleText1')?.innerText!)} id="exampleText1" className='px-2 h-[80px] flex items-center justify-center'>Explain something to me</p>
+                <p onClick={() => copyToClipBoard(document.getElementById('exampleText2')?.innerText!)} id="exampleText2" className='px-2 h-[80px] flex items-center justify-center'>Create a course syllabus for me</p>
+                <p onClick={() => copyToClipBoard(document.getElementById('exampleText3')?.innerText!)} id="exampleText3" className='px-2 h-[80px] flex items-center justify-center'>What is JavaScript?</p>
               </div>
             </div>
 
@@ -58,9 +58,9 @@ function HomePage() {
               </div>
 
               <div className="select-none text-lightMode-text dark:text-darkMode-text">
-                <p id="infoText" className='h-[80px] flex items-center justify-center'>Choose your desired GPT Model when chatting</p>
-                <p id="infoText" className='h-[80px] flex items-center justify-center'>Save your chats to continue from anywhere</p>
-                <p id="infoText" className='h-[80px] flex items-center justify-center'>Live notifications and interactivity</p>
+                <p id="infoText" className='px-2 h-[80px] flex items-center justify-center'>Choose your desired GPT Model when chatting</p>
+                <p id="infoText" className='px-2 h-[80px] flex items-center justify-center'>Save your chats to continue from anywhere</p>
+                <p id="infoText" className='px-2 h-[80px] flex items-center justify-center'>Live notifications and interactivity</p>
               </div>
             </div>
 
@@ -72,9 +72,9 @@ function HomePage() {
               </div>
 
               <div className="select-none text-lightMode-text dark:text-darkMode-text">
-                <p id="infoText" className='h-[80px] flex items-center justify-center'>May occasionally generate incorrect information</p>
-                <p id="infoText" className='h-[80px] flex items-center justify-center'>May occasionally produce harmful instructions or biased content</p>
-                <p id="infoText" className='h-[80px] flex items-center justify-center'>Limited knowledge of world and events after 2021</p>
+                <p id="infoText" className='px-2 h-[80px] flex items-center justify-center'>May occasionally generate incorrect information</p>
+                <p id="infoText" className='px-2 h-[80px] flex items-center justify-center'>May occasionally produce harmful instructions or biased content</p>
+                <p id="infoText" className='px-2 h-[80px] flex items-center justify-center'>Limited knowledge of world and events after 2021</p>
               </div>
             </div>
           </div>
@@ -83,8 +83,8 @@ function HomePage() {
           <div className="flex mt-2 transition-all ease-in-out">
             <div className="w-full border-3 border-lightMode-primary/30 py-3 mx-auto bg-lightMode-primary/90 shadow rounded-lg">
               <div>
-              <h1 className="text-[#4a4a4a] text-[24px] font-bold text-left px-3 flex gap-2 items-center select-none"><InformationCircleIcon className="h-8 w-8 text-[#4a4a4a]"/> Read More</h1>
-              <p className="text-[#5b5b5b] text-[18px] text-left px-3 select-none">Find trending prompts, learn about GPT, and more.</p>
+              <h1 className="text-[#4a4a4a] lg:text-[24px] font-bold text-left px-3 flex gap-2 items-center select-none"><InformationCircleIcon className="h-8 w-8 text-[#4a4a4a]"/> Read More</h1>
+              <p className="text-[#5b5b5b] lg:text-[18px] text-left px-3 select-none">Find trending prompts, learn about GPT, and more.</p>
               </div>
             </div>
           </div>
