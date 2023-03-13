@@ -1,5 +1,5 @@
 # ChatGPT Clone - Version 2.0
-This is a rewrite of my original ChatGPT clone. Includes many new features such as:
+This is a rewrite of our original ChatGPT clone. Includes many new features such as:
 - CRUD functionality via Firebase & Next.JS
 - Choose your GPT model type (different nerual networks)
 - Google oAuth sign-in and authentication
